@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Portfolio</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application'  %>
+  </head>
+
+  <body>
+    <button class="btn-nav">
+      <div class="bar arrow-top-r"></div>
+      <div class="bar arrow-middle-r"></div>
+      <div class="bar arrow-bottom-r"></div>
+    </button>
+    <div class="nav-container hidden hideNav">
+      <ul class="nav-list">
+        <li class="list-item"><a data-scroll href="#homepage">Home</a></li>
+        <li class="list-item"><a data-scroll href="#about_me">About Me</a></li>
+        <li class="list-item"><a data-scroll href="#skills">Skills</a></li>
+        <li class="list-item"><a data-scroll href="#projects">Projects</a></li>
+        <li class="list-item"><a data-scroll href="#contact">Contact</a></li>
+      </ul>
+    </div>
+
+<!-- <a href="http://codepen.io/tonkec" class="ua" target="_blank">
+<i class="fa fa-user"></i></a> -->
+
+
+
+    <%= yield %>
+
+    <script type="text/javascript">
+    $(window).load(function() {
+      $(".btn-nav").on("click tap", function() {
+        $(".nav-container").toggleClass("showNav hideNav").removeClass("hidden");
+        $(this).toggleClass("animated");
+      });
+    });
+    </script>
+
+    <script>
+      smoothScroll.init();
+    </script>
+
+<script type="text/javascript">
+    var $cards = $('.card-object'),
+    $faceButtons = $('.face');
+
+$faceButtons.on('click', flipCard);
+
+function flipCard(event) {
+  event.preventDefault();
+
+  var $btnFace = $(this),
+      $card = $btnFace.parent('.card-object');
+
+  if( $card.hasClass('flip-in') ) {
+    closeCards();
+  } else {
+    closeCards();
+    openCard($card);
+  }
+
+}
+
+function closeCards() {
+  $cards
+    .filter('.flip-in')
+    .removeClass('flip-in')
+    .addClass('flip-out');
+}
+
+function openCard($card) {
+  $card
+    .removeClass('flip-out')
+    .addClass('flip-in');
+}</script>
+  </body>
+</html>

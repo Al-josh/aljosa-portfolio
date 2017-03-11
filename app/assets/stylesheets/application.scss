@@ -16,51 +16,151 @@
 
  @import "bootstrap-sprockets";
  @import "bootstrap";
+ @import url('https://fonts.googleapis.com/css?family=Francois+One');
+ @import url('https://fonts.googleapis.com/css?family=Oswald:400,600,700');
 
 body {
-  background-color: #010101;
+  background-color: #EFF0F1;
+  color: black;
 }
 
-.container {
-  background-color: white;
-}
+h1 {
+  margin: 0;
+  font-family: 'Francois One', sans-serif;
 
-// .screen {
-//   height: 100vh;
-// }
-
-.about_me {
-  height: 100vh;
-}
-
-.box-blue {
-  height: 100vh;
-  background-color: #402CCB;
-  color: white;
-  text-shadow: 2px 2px #010101;
-  align-items: center;
 }
 
 h2 {
-  margin-top: 25px;
+  text-align: center;
+  font-family: 'Francois One', sans-serif;
+  margin-top: 50px;
+  font-size: 40px;
+
 }
 
-.my-photo {
-  background-image: url("aljosa.jpg");
-  background-size: cover;
-  margin: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 310px;
-  height: 400px;
+// right contact icons
+
+#fixedsocial {
+    top:30%;
+    height:200px;
+    width:60px;
+    position:fixed;
+    right: 15px;
+}
+
+.github {
+   transition:ease 500ms;
+    background-size:50px;
+    opacity:1;
+    filter: invert(100%);
+}
+
+.email {
+    transition:ease 500ms;
+    background-size:50px;
+    opacity:1;
+    filter: invert(100%);
+}
+
+// parallax
+
+.parallax {
+    /* The image used */
+    background-image: url("cover.jpg");
+    opacity: 0.65;
+
+    /* Set a specific height */
+    height: 100vh;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 15%;
 }
 
 .gradient {
-  background: linear-gradient(to bottom, rgba(102,51,153,0.50) 0%,rgba(0,0,205,0.65) 100%);
-  height: 400px;
-  width: 310px;
+  background: linear-gradient(to bottom, rgba(255, 153, 0,0.40) 0%,rgba(0,0,205,5) 100%);
+  height: 100vh;
+  width: 100%;
 }
+
+.content {
+  display: flex;
+  width: 45%;
+  // height: 20%;
+  background: rgba(0,0,0,0.4);
+  margin-left: 10%;
+  // margin-top: 50px;
+  color: white;
+  justify-content: center;
+  vertical-align: middle;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+// about me
+
+
+.text_about {
+  font-family: 'Francois One', sans-serif;
+  font-size: 20px;
+  text-align: center;
+  margin-top: 20px;
+  padding: 30px 100px;
+}
+
+.about_me {
+  height: 800px;
+}
+
+// cards in about-me-photos
+
+// skills
+
+.skills-row {
+  margin-top: 100px;
+}
+
+.ninja {
+  display: flex;
+  justify-content: center;
+}
+
+.parallax2 {
+    /* The image used */
+    background-image: url("parallax222.jpg");
+    opacity: 1;
+
+    /* Set a specific height */
+    height: 500px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 15%;
+}
+
+.content-skills {
+  display: flex;
+  color: black;
+  text-align: center;
+  justify-content: center;
+  padding: 30px;
+  margin-top: -200px;
+}
+
+.row-skills {
+  margin-top: -150px;
+  font-family: 'Francois One', sans-serif;
+  font-size: 40px;
+  color: black;
+}
+
+// projects
 
 .flex-container {
   padding: 0;
@@ -78,26 +178,23 @@ h2 {
 }
 
 .flex-item {
+
   background-color: #402CCB;
-  // background: linear-gradient(45deg, rgba(0, 0, 2, 0.95) 0%, rgba(0, 0, 0, 0.5) 40%, rgba(0, 0, 0, 0.1) 100%) no-repeat;
   padding: 10px;
   width: 300px;
   height: 300px;
   margin-top: 40px;
-
   line-height: 300px;
   color: black;
   font-weight: bold;
   font-size: 3em;
   text-align: center;
   filter: drop-shadow(0px 0px 10px rgba(0,0,0,.5))
-
 }
 
 .small-box {
   display: flex;
   background-color: white;
-  // background: url('temperature.white.gif');
   width: 280px;
   height: 250px;
   align-items: center;
@@ -114,7 +211,6 @@ h2 {
 .subtitle {
   display: flex;
   background-color: transparent;
-  // background: url('temperature.white.gif');
   width: 280px;
   height: 20px;
   align-items: center;
@@ -135,20 +231,38 @@ a {
   color: black;
 }
 a:hover {
-  color: white;
   text-decoration: underline;
 }
 
-.skills-row {
+// contact
+
+.contact {
+  background-color: #434242;
   margin-top: 50px;
+  padding-top: 50px;
+  height: 100%;
 }
 
-.ninja {
+.container {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: 30px;
+  margin-bottom: 80px;
 }
 
-.box-white {
-  background-color: white;
-  height: 100vh;
+.box1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.contact-text {
+  font-size: 20px;
+  margin-left: 10px;
+  font-family: 'Francois One', sans-serif;
+}
+.contact-text a:hover {
+  color: white;
 }

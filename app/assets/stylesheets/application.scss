@@ -22,6 +22,7 @@
 body {
   background-color: #EFF0F1;
   color: black;
+  height: 100%;
 }
 
 h1 {
@@ -66,11 +67,12 @@ h2 {
 
 .parallax {
     /* The image used */
-    background-image: url("cover.jpg");
+    background-image: url("http://res.cloudinary.com/dzctpgu9d/image/upload/v1489265881/cover_saw6qy.jpg");
     opacity: 0.65;
 
     /* Set a specific height */
     height: 100vh;
+    width: 100%;
 
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
@@ -111,9 +113,7 @@ h2 {
   padding: 30px 100px;
 }
 
-.about_me {
-  height: 800px;
-}
+
 
 // cards in about-me-photos
 
@@ -121,6 +121,7 @@ h2 {
 
 .skills-row {
   margin-top: 100px;
+  height: 10%;
 }
 
 .ninja {
@@ -128,9 +129,29 @@ h2 {
   justify-content: center;
 }
 
+.col-sm-1 {
+  padding-left: 50px;
+}
+
+// .col-sm-1, #ninja-left {
+//   margin-right: 300px
+// }
+//
+// .col-sm-1 #ninja-right {
+//   margin-left: 300px
+// }
+
+@media (max-width: 667px) {
+    .col-sm-1 {
+        margin-left:200px;
+        margin-right:200px;
+    }
+}
+
+
 .parallax2 {
     /* The image used */
-    background-image: url("parallax222.jpg");
+    background-image: url("http://res.cloudinary.com/dzctpgu9d/image/upload/v1489265922/parallax222_u5dnxn.jpg");
     opacity: 1;
 
     /* Set a specific height */

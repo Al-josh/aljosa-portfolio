@@ -24,7 +24,7 @@
             </div>
           </a>
           <div class="face back">
-            <div class="container cont-margin">
+            <div class="cont-margin">
               <div class="row">
                 <div class="col col-md-12 bold-row">Coder Factory Academy</div>
               </div>
@@ -65,7 +65,7 @@
             </div>
           </a>
           <div class="face back">
-            <div class="container cont-margin">
+            <div class="cont-margin">
               <div class="row">
                 <div class="col col-md-12 bold-row">People & Projects Limited</div>
               </div>
@@ -97,7 +97,7 @@
             </div>
           </a>
           <div class="face back">
-            <div class="container cont-margin">
+            <div class="cont-margin">
               <div class="row">
                 <div class="col col-md-12">Tasting new food</div>
               </div>
@@ -128,13 +128,16 @@
       <div class="col-md-12 ninja">Skills</div>
     </div>
     <div class="row skills-row">
-      <div class="col-md-2 ninja"></div>
-      <div class="col-md-1 ninja"></div>
-      <div class="col-md-2 ninja"><img src="<%= asset_path 'ninja-ruby.png' %>" height="220px"></div>
-      <div class="col-md-2 ninja"><img src="<%= asset_path 'ninja-css.png' %>" height="220px"></div>
-      <div class="col-md-2 ninja"><img src="<%= asset_path 'ninja-rails.png' %>" height="220px"></div>
+      <div class="col-sm-3 col-md-2 ninja"></div>
+      <div class="col-sm-1 col-md-1 ninja"></div>
+      <div class="col-sm-2 col-md-2 ninja" id="ninja-left"><img src="<%= asset_path 'ninja-ruby.png' %>" height="220px"></div>
+      <div class="col-sm-2 col-md-2 ninja"><img src="<%= asset_path 'ninja-css.png' %>" height="220px"></div>
+      <div class="col-sm-2 col-md-2 ninja" id="ninja-right"><img src="<%= asset_path 'ninja-rails.png' %>" height="220px"></div>
     </div>
   </div>
+
+
+
 
   <div class="container projects" id="projects">
     <h2>Projects</h2>
